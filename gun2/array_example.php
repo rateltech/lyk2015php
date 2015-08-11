@@ -1,6 +1,14 @@
 <meta charset="UTF-8">
 <?php
 
+function sortArraysBy($array, $aKeyInAnArray){
+    $holder = [];
+    foreach($array as $key => $value)
+        $holder[$key] = $value[$aKeyInAnArray];
+    array_multisort($holder, SORT_ASC, $array);
+    return $array;
+}
+
 $students = array(
     /*
     "Arzu Tuyan",
@@ -55,15 +63,14 @@ $students = array(
 
 // çok katmanlı bu dizideki kişileri yaşa göre listeleyeceğiz
 
-// yaşlar için bir dizi oluşturuyoruz
+/*
 $ages = [];
-
-// yaşlar dizisini tanımlayıcı anahtarlar ile birlikte dolduruyoruz
 foreach($students as $id => $student)
     $ages[$id] = $student['age'];
-// yaşları içeren diziye göre öğrenciler dizisini artan sıralıyoruz
 array_multisort($ages, SORT_ASC, $students);
+*/
 
+$students = sortArraysBy($students, 'age');
 
 foreach($students as $student){
     echo
