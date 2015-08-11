@@ -1,3 +1,6 @@
+# lyk2015php
+Linux Yaz Kampı 2015 PHP Eğitiminde yazılan dosyalar.
+
 ### Katılımcıların GitHub Profilleri ve Yaptıkları Örnekler
 - [Arzu Tuyan](https://github.com/arzutuyan/lyk2015)
 - [Ayşenur Karaslan](https://github.com/AysenurKaraslan/lyk2015php)
