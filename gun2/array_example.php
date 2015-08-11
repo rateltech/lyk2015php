@@ -16,7 +16,7 @@ $students = array(
             'last_name' => 'Tuyan',
             'full_name' => 'Arzu Tuyan',
         ),
-        'age' => 21
+        'age' => 23
     ),
     array(
         'name' => array(
@@ -24,7 +24,7 @@ $students = array(
             'last_name' => 'Karaaslan',
             'full_name' => 'Ayşenur Karaaslan',
         ),
-        'age' => 23
+        'age' => 21
     ),
     array(
         'name' => array(
@@ -40,7 +40,7 @@ $students = array(
             'last_name' => 'Günay',
             'full_name' => 'Büşra Günay',
         ),
-        'age' => 25
+        'age' => 22
     ),
     array(
         'name' => array(
@@ -52,6 +52,18 @@ $students = array(
     ),
 
 );
+
+// çok katmanlı bu dizideki kişileri yaşa göre listeleyeceğiz
+
+// yaşlar için bir dizi oluşturuyoruz
+$ages = [];
+
+// yaşlar dizisini tanımlayıcı anahtarlar ile birlikte dolduruyoruz
+foreach($students as $id => $student)
+    $ages[$id] = $student['age'];
+// yaşları içeren diziye göre öğrenciler dizisini artan sıralıyoruz
+array_multisort($ages, SORT_ASC, $students);
+
 
 foreach($students as $student){
     echo
