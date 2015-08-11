@@ -11,17 +11,12 @@ echo "<br />";
  */
 
 $bilgiler = array(
-    array("ad" => "ömer",
-          "soyad" => "çıtak",
-          "yas" => 22),
-    array("ad" => "sezer",
-          "soyad" => "bozkır",
-          "yas" => 22),
+    array("ad" => array("mehmet", "uğur"),
+          "soyad" => "arıcı",
+          "yas" => 22)
 );
 
-echo count($bilgiler[0]);
-
-
+echo count($bilgiler);
 
 $encode = json_encode($bilgiler);
 
